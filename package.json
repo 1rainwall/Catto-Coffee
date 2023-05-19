@@ -17,6 +17,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.22"
   }
 }
