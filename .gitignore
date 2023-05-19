@@ -1,4 +1,11 @@
-node_modules
+# Ignorar la carpeta "node_modules"
+node_modules/
+
+# Ignorar la carpeta "dist"
 dist/
-.env/
-package-lock.json/
+
+# Ignorar el archivo ".env"
+.env
+
+# Ignorar el archivo "package-lock.json"
+package-lock.json
