@@ -8,6 +8,6 @@ export class ReadyListener extends Listener {
 
   public run(client: Client) {
     const { tag, id } = client.user!;
-    return this.container.logger.info(`Bot iniciado como ${tag} (${id})`);
+    return this.container.logger.info(`Bot iniciado como ${tag} (${id})`)
   }
 }
