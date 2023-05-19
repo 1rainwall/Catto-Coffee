@@ -3,6 +3,7 @@ export default {
   token: process.env.TOKEN,
   prefix: process.env.PREFIX,
   guild: process.env.GUILD,
+  Owner: process.env.BOT_OWNER,
   // Database config
   database: {
     host: process.env.DB_HOST,

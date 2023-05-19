@@ -9,7 +9,7 @@ export class ReadyListener extends Listener {
 
   public async run(client: Client) {
     await Connect();
-    this.container.logger.info(`Conectado a la base de datos.`);
+    this.container.logger.info(`Conectado a la base de datos. ✔️`);
     const { tag, id } = client.user!;
     return this.container.logger.info(`Bot iniciado como ${tag} (${id})`);
   }
