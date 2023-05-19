@@ -1,6 +1,5 @@
 import { Command } from "@sapphire/framework";
 import { Connect } from "../../database/db";
-import util from "util";
 
 export class BanCommand extends Command {
   public constructor(context: Command.Context, options: Command.Options) {
@@ -36,19 +35,19 @@ export class BanCommand extends Command {
     const userID = userToBan.id;
 
     connection.query("INSERT INTO Moderation SET ?", {
-        GuildID: interaction.guild?.id,
-        UserID: userID,
-        ModeratorID: interaction.user.id,
-        Reason: razon,
-        Type: "ban",
-      });
+      GuildID: interaction.guild?.id,
+      UserID: userID,
+      ModeratorID: interaction.user.id,
+      Reason: razon,
+      Type: "ban",
+    });
 
-    await interaction.guild!.members.ban(userID, {
+    interaction.guild!.members.ban(userID, {
       reason: `${razon}` || "No se ha especificado una razon",
     });
 
     return interaction.reply({
-      content: `${userToBan.tag} ha sido baneado. <:accepted:1083594549575823430>`,
+      content: `<@${userID}> - \`${userToBan.tag}\` - \`${userID}\` ha sido baneado. <:accepted:1083594549575823430>`,
     });
   }
 }
