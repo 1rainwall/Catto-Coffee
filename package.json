@@ -2,7 +2,7 @@
   "name": "cattocoffee",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "start": "node .",
@@ -17,6 +17,8 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@sapphire/framework": "^4.4.3",
+    "@types/mysql2": "github:types/mysql2",
     "discord.js": "^14.11.0",
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.22"
