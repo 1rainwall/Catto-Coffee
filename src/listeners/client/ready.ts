@@ -12,7 +12,7 @@ export class ReadyListener extends Listener {
   public async run(client: Client) {
     await checkVoiceMembers();
     setInterval(checkVoiceMembers, 100000);
-    setInterval(updateXP, 100); 
+    setInterval(updateXP, 100);
     connection.connect((err) => {
       if (err) {
         console.error("Error al conectar a la base de datos:", err);
