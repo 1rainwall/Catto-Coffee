@@ -1,8 +1,16 @@
 import { ChatInputCommand, Command } from "@sapphire/framework";
+import { Time } from "@sapphire/time-utilities";
 
 export class PingCommand extends Command {
   public constructor(context: Command.Context, options: Command.Options) {
-    super(context, { ...options });
+    super(context, {
+      ...options,
+      requiredClientPermissions: ["SendMessages"],
+      requiredUserPermissions: ["SendMessages"],
+      cooldownDelay: Time.Second * 10,
+      cooldownLimit: 1,
+      // preconditions: ['OwnerOnly']
+    });
   }
 
   public override registerApplicationCommands(

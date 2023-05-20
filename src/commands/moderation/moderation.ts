@@ -1,6 +1,5 @@
 import { Subcommand } from "@sapphire/plugin-subcommands";
 import connection from "../../database/db";
-import Config from "../../../config";
 import { ChatInputCommand } from "@sapphire/framework";
 import util from "util";
 const query = util.promisify(connection.query).bind(connection);
@@ -9,6 +8,8 @@ export class ModerationCommand extends Subcommand {
   public constructor(context: Subcommand.Context, options: Subcommand.Options) {
     super(context, {
       ...options,
+      requiredClientPermissions: ["BanMembers"],
+      requiredUserPermissions: ["BanMembers"],
       name: "mod",
       description: "Comandos de moderacion",
       subcommands: [
@@ -61,10 +62,14 @@ export class ModerationCommand extends Subcommand {
     const razon = interaction.options.getString("razon") || "No especificada";
     const userID = userToBan.id;
 
-    await connection.execute(
-        "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'ban')",
-        [interaction.guild?.id, userID, interaction.user.id, razon]
-      );
+    // await query(
+    //     "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'ban')",
+    //     [interaction.guild?.id, userID, interaction.user.id, razon]
+    //   );
+
+    await query({
+      sql: "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'Ban')",
+      values:[interaction.guild?.id, userID, interaction.user.id, razon]});
 
     await interaction.guild!.members.ban(userID, {
       reason: `${razon}` || "No se ha especificado una razon.",
@@ -82,10 +87,14 @@ export class ModerationCommand extends Subcommand {
     const razon = interaction.options.getString("razon") || "No especificada";
     const userID = userToBan.id;
 
-    await connection.execute(
-        "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'unban')",
-        [interaction.guild?.id, userID, interaction.user.id, razon]
-      );
+    // await connection.execute(
+    //     "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'unban')",
+    //     [interaction.guild?.id, userID, interaction.user.id, razon]
+    //   );
+
+    await query({
+      sql: "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'Unban')",
+      values:[interaction.guild?.id, userID, interaction.user.id, razon]});
 
     await interaction.guild!.members.unban(userID);
 

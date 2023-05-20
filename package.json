@@ -19,6 +19,7 @@
   "dependencies": {
     "@sapphire/framework": "^4.4.3",
     "@sapphire/plugin-subcommands": "^4.0.1",
+    "@sapphire/time-utilities": "^1.7.9",
     "@sapphire/utilities": "^3.11.2",
     "@types/mysql2": "github:types/mysql2",
     "canvacord": "^5.4.9",
