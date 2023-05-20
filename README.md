@@ -1,5 +1,5 @@
 # Catto Coffee
-Versión actualizada de Catto utilizando Typescript y la libreria principal de [Sapphire](https://www.sapphirejs.dev).
+Versión actualizada de Catto utilizando Typescript y la libreria principal de [Sapphire](https://www.sapphirejs.dev) y [discord.js](https://discord.js.org/#/).
 
 Instalar dependencias
 
