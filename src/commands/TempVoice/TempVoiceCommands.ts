@@ -182,5 +182,11 @@ export class TempVoiceCommands extends Subcommand {
             idHints: ['1109636999004041279']
         }
     );
+
+
+  }
+
+  public async chatInputSetup(interaction: Subcommand.ChatInputCommandInteraction) {
+        
   }
 }
