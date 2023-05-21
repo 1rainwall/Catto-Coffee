@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { SapphireClient } from "@sapphire/framework";
+import { LogLevel, SapphireClient } from "@sapphire/framework";
 import { ActivityType } from "discord.js";
 
 export class BotClient extends SapphireClient {
@@ -23,6 +23,9 @@ export class BotClient extends SapphireClient {
         "GuildPresences",
         "GuildIntegrations",
       ],
+      logger: {
+        level: LogLevel.Debug,
+      },
       loadMessageCommandListeners: true,
       presence: {
         status: "dnd",

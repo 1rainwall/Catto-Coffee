@@ -51,7 +51,10 @@ export class ModerationCommand extends Subcommand {
                 .setDescription("El usuario al que quieres desbanear")
                 .setRequired(true)
             )
-        )
+        ),
+        {
+          idHints: ['1109636998064521266']
+        }
     );
   }
 

@@ -12,6 +12,7 @@ export class VoiceEXPCommands extends Subcommand {
     super(context, {
       ...options,
       name: "xp",
+      description: "Comandos de experiencia",
       subcommands: [
         { name: "info", chatInputRun: "xpInfo" },
         {
@@ -70,7 +71,9 @@ export class VoiceEXPCommands extends Subcommand {
                   "Ver las recompensas por nivel de este servidor."
                 )
             )
-        )
+        ),{
+            idHints: ["1109637000602075158"]
+        }
     );
   }
 

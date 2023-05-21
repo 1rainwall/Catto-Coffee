@@ -9,7 +9,8 @@ export class PingCommand extends Command {
       requiredUserPermissions: ["SendMessages"],
       cooldownDelay: Time.Second * 10,
       cooldownLimit: 1,
-      // preconditions: ['OwnerOnly']
+      
+      // preconditions: ["OwnerOnly"]
     });
   }
 
@@ -17,7 +18,9 @@ export class PingCommand extends Command {
     registry: ChatInputCommand.Registry
   ) {
     registry.registerChatInputCommand((builder) =>
-      builder.setName("ping").setDescription("Pong!")
+      builder.setName("ping").setDescription("Pong!"),{
+        idHints: ["1109636996554575932"]
+      }
     );
   }
 

@@ -11,14 +11,16 @@ export class GreedCommand extends Command {
   public override registerApplicationCommands(registry: Command.Registry) {
     registry.registerChatInputCommand((builder) =>
       builder
-        .setName("saludar")
+        .setName("greet")
         .setDescription("Saluda a un usuario")
         .addUserOption((option) =>
           option
             .setName("usuario")
             .setDescription("El usuario al que quieres saludar")
             .setRequired(true)
-        )
+        ),{
+          idHints: ["1109636995111731311"]
+        }
     );
   }
 
