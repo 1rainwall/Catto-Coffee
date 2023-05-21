@@ -5,6 +5,7 @@ export class GreedCommand extends Command {
   public constructor(context: Command.Context, options: Command.Options) {
     super(context, {
       ...options,
+      // preconditions: ['OwnerOnly']
     });
   }
 

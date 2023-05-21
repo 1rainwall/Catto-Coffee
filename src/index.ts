@@ -7,5 +7,6 @@ client.login(process.env.TOKEN);
 declare module '@sapphire/framework' {
     interface Preconditions {
       OwnerOnly: never;
+      ModOnly: never;
     }
   }

@@ -9,7 +9,7 @@ export class PingCommand extends Command {
       requiredUserPermissions: ["SendMessages"],
       cooldownDelay: Time.Second * 10,
       cooldownLimit: 1,
-      // preconditions: ["OwnerOnly"]
+      // preconditions: ['ModOnly']
     });
   }
 

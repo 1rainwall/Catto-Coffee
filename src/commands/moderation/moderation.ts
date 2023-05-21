@@ -8,8 +8,8 @@ export class ModerationCommand extends Subcommand {
   public constructor(context: Subcommand.Context, options: Subcommand.Options) {
     super(context, {
       ...options,
+      preconditions: ['ModOnly'],
       requiredClientPermissions: ["BanMembers"],
-      requiredUserPermissions: ["BanMembers"],
       name: "mod",
       description: "Comandos de moderacion",
       subcommands: [
