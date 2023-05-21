@@ -23,5 +23,3 @@ export default {
     avatar: "https://i.imgur.com/Gm6SA0K.jpg",
   }
 };
-
-export const BotOwners: string[] = ['249600415040012309'];
