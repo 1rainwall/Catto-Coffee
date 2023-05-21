@@ -189,4 +189,53 @@ export class TempVoiceCommands extends Subcommand {
   public async chatInputSetup(interaction: Subcommand.ChatInputCommandInteraction) {
         
   }
+
+    public async chatInputClaim(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputGhost(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputUnghost(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputLimit(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputLock(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputUnlock(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputName(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputPermit(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputReject(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputTransfer(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputInvite(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+
+    public async chatInputBitrate(interaction: Subcommand.ChatInputCommandInteraction) {
+
+    }
+    
 }
