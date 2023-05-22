@@ -65,11 +65,6 @@ export class ModerationCommand extends Subcommand {
     const razon = interaction.options.getString("razon") || "No especificada";
     const userID = userToBan.id;
 
-    // await query(
-    //     "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'ban')",
-    //     [interaction.guild?.id, userID, interaction.user.id, razon]
-    //   );
-
     await query({
       sql: "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'Ban')",
       values:[interaction.guild?.id, userID, interaction.user.id, razon]});
@@ -89,11 +84,6 @@ export class ModerationCommand extends Subcommand {
     const userToBan = interaction.options.getUser("usuario", true);
     const razon = interaction.options.getString("razon") || "No especificada";
     const userID = userToBan.id;
-
-    // await connection.execute(
-    //     "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'unban')",
-    //     [interaction.guild?.id, userID, interaction.user.id, razon]
-    //   );
 
     await query({
       sql: "INSERT INTO Moderation (GuildID, UserID, ModeratorID, Reason, Type) VALUES (?, ?, ?, ?, 'Unban')",

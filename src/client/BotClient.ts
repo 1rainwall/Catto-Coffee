@@ -32,7 +32,7 @@ export class BotClient extends SapphireClient {
         activities: [
           {
             name: "Under Development",
-            type: ActivityType.Listening,
+            type: ActivityType.Watching,
           },
         ],
       },
