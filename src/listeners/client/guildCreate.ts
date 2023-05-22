@@ -10,6 +10,6 @@ export class GuildCreateListener extends Listener {
   }
   public async run(guild: Guild) {
     await checkVoiceMembers();
-    this.container.logger.info(`El bot se ha unido a ${guild.name}(${guild.id}.`);
+    this.container.logger.info(`El bot se ha unido a ${guild.name}(${guild.id})`);
   }
 }
