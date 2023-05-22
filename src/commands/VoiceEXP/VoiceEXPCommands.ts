@@ -72,7 +72,7 @@ export class VoiceEXPCommands extends Subcommand {
                 )
             )
         ),{
-            idHints: ["1109637000602075158"]
+            idHints: [""]
         }
     );
   }

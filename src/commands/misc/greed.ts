@@ -20,7 +20,7 @@ export class GreedCommand extends Command {
             .setDescription("El usuario al que quieres saludar")
             .setRequired(true)
         ),{
-          idHints: ["1109636995111731311"]
+          idHints: [""]
         }
     );
   }

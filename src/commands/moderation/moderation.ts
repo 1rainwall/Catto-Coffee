@@ -53,7 +53,7 @@ export class ModerationCommand extends Subcommand {
             )
         ),
         {
-          idHints: ['1109636998064521266']
+          idHints: ['']
         }
     );
   }

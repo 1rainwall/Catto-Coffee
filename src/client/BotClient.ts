@@ -24,7 +24,7 @@ export class BotClient extends SapphireClient {
         "GuildIntegrations",
       ],
       logger: {
-        level: LogLevel.Debug,
+        level: LogLevel.Info,
       },
       loadMessageCommandListeners: true,
       presence: {

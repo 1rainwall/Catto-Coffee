@@ -13,12 +13,10 @@ export class PingCommand extends Command {
     });
   }
 
-  public override registerApplicationCommands(
-    registry: ChatInputCommand.Registry
-  ) {
+  public override registerApplicationCommands(registry: ChatInputCommand.Registry) {
     registry.registerChatInputCommand((builder) =>
       builder.setName("ping").setDescription("Pong!"),{
-        idHints: ["1109636996554575932"]
+        idHints: [""]
       }
     );
   }
